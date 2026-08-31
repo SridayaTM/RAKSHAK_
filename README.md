@@ -1,36 +1,46 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# RAKSHAK
 
-## Getting Started
+### Intelligent Mine Rescue & Underground Situational Awareness System
 
-First, run the development server:
+RAKSHAK is a unified mine-rescue control-room platform designed to provide operators with a real-time operational picture of an underground rover mission.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+The system brings together **live vision, thermal sensing, atmospheric monitoring, 3D LiDAR/SLAM mapping, communications, detection, and safety-state logic** into a single control interface.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The objective is simple:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+> **Understand the underground environment before exposing rescuers to it.**
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## Overview
 
-To learn more about Next.js, take a look at the following resources:
+Underground rescue operations are often performed with incomplete information about the environment, atmospheric conditions, visibility, communications, and the location of potential survivors.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+RAKSHAK addresses this by using a remotely operated rover as an information-gathering platform.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Instead of presenting isolated sensor values, RAKSHAK combines multiple sources of evidence into a unified operational picture.
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```text
+                    UNDERGROUND ROVER
+                           │
+        ┌──────────────────┼──────────────────┐
+        │                  │                  │
+        ▼                  ▼                  ▼
+   ATMOSPHERE           VISION             LiDAR
+ CH₄ / CO / O₂        IR / Thermal        SLAM
+   / CO₂                 │                  │
+        │                │                  │
+        └────────────────┼──────────────────┘
+                         │
+                         ▼
+                  EVIDENCE FUSION
+                         │
+          ┌──────────────┼──────────────┐
+          │              │              │
+          ▼              ▼              ▼
+      DETECTION      COMMUNICATION     SAFETY
+          │              │              │
+          └──────────────┼──────────────┘
+                         │
+                         ▼
+                OPERATIONAL DECISION
